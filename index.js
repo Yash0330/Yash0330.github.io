@@ -1,325 +1,722 @@
-let showMenu = false
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box
+}
 
-// HTML GENERATOR FUNCTIONS
-function generateHomePage(){
-	return `
-		<div class="home">
-			<div class="hero">
-				<div class="hero-header">
-					<header>
-						<div class="profile-pic-wrapper">
-							<img src="images/profile.png" alt="" class="profile">
-						</div>
-						
-					</header>
-					<div class="hero-text">
-						<h1>Yashwanth</h1>
-						<h2>AI Enthusiast</h2>
-						<br>
-						<i><h3>I am currently studying Electronics and communication Engineering Sophomore year IIT Guwahati.</h3>
-						<h4>I am a lover of dogs, music and all things code!</h4></i>
-						<div class="cta-btns">
-							<button class="cta-projects">Projects</button>
-							<button class="cta-contact">Contact Me</button>
-						</div>
-					</div>
-				</div>
-				<br>
-			</div>
-		</div>	
+html {
+	height: 100%;
+	font-family: 'Roboto', sans-serif;
+	line-height: 35px; 
+}
+
+body {
+	height: 100%;	
+	background-color: rgb(29, 30, 34);
+	margin: 0 auto;
+	background:  linear-gradient(
+      rgba(29, 30, 34, 0.95),
+      rgba(29, 30, 34, 0.6)
+    ), url(images/motherboard.jpg);
+	background-position: center;
+	background-size: cover;	
+}
+
+.navbar-menu {
+	display: none;
+}
+
+navbar {
+	width: 100%;
+	position: fixed;
+	z-index: 110;
+	background-color: #0B0C10;
+	border-bottom: .1px solid #C5C6C7;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.inner-nav {
+	display: flex;
+	width: 100%;
+	justify-content: space-between;
+	align-items: center;
+	max-width: 1200px;
+	padding: 10px;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+.home-icon {
+	text-decoration: none;
+	color: white;
+	font-weight: bolder;
+	background-color: rgb(29, 30, 34);
+	padding: 10px;
+	border-radius: 100%;
+	border: 2px solid #C5C6C7	
+}
+
+.home-icon:hover {
+	color: #848FA5;
+	cursor: pointer
+}
+
+.hamburger {
+	cursor: pointer;
+}
+
+.hamburger div {
+	width: 35px;
+	height: 5px;
+	background-color: white	;
+	margin: 5px
+}
+
+.menu {
+	padding-top: 79px;
+	height: 100%;
+	font-size: 32px;
+	display: none;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: center;
+}
+
+.navbar-list li div:hover {
+	color: #848FA5;
+	font-weight: 700;
+}
+
+.navbar-socials li i:hover {
+	color: #848FA5;
+	font-weight: 700;
+	transform: scale(1.1);
+
+}
+
+.menu-home, .about, .projects, .contact{
+	background-color: #0B0C10;
+	width: 100%;
+	text-align: center;
+	height: 20%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-bottom: 1px solid #C5C6C7;
+	cursor: pointer;
+	font-size: 3rem;
+	color: white
+}
+.menu-home:hover, .about:hover, .projects:hover, .contact:hover{
+	background-color: #1F2833;
+}
+
+.contact {
+	display: flex;
+	flex-direction: column;
+}
+
+.socials {
+	width: 100%;
+	height: 15%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.socials-ul {
+	width: 90%;
+	display: flex;
+	list-style: none;
+	font-size: 20px;
+	justify-content: space-between;
+	align-items: center;
+	padding-top: 20px;
+}
+
+.socials-ul li a {
+	text-decoration: none;
+	margin: 0 15px;
+	color: white;
+}
+
+.socials-ul li a i {
+	transform: scale(1.5)
+}
+.socials-ul li a i:hover {
+	color: #848FA5
+}
+
+.hero {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.hero-header {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.hero-header header{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.profile-pic-wrapper {
+	display: flex; 
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	margin-bottom: 20px;
+}
+
+.profile {
+	border-radius: 50%;
+	width: 50%;
+}
+
+.hero-text {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+}
+
+main {
+	padding-top: 120px;
+	margin: 0 auto;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: center;
+	width: 90%;
+	color: white;
+	overflow: auto;
+	min-height: 100%;
+	max-width: 600px;
+}
+
+main > div {
+	padding: 0;
+	margin: 0 ;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	margin-bottom: 20px;	
+	padding-bottom: 50px;
+}
+
+main > div:first-child{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	margin: 0
+}
+
+main h1 {
+	font-size: 50px;
+	font-weight: 500;
+	margin-bottom: 20px;
+}
+
+main img {
+	width: 100%;
+	max-width: 800px;
+	margin: 10px 5px;
+	border: 1px solid black;
+}
+
+main h1, h2, h3, h4, h5 {
+	font-weight: normal;
+}
+
+main h2 {
+	font-size: 30px;
+	color: #C5C6C7;
+}
+
+main h3 {
+	font-size: 22px;
+	margin-bottom: 20px
+}
+
+main h4 {
+	font-size: 20px;
+	margin-bottom: 20px
+}
+
+main h5 {
+	font-size: 18px;
+	margin-bottom: 20px
+}
+
+
+.cta-btns button{
+	padding: 15px;
+	width: 130px;
+	font-size: 18px;
+	font-weight: 500;
+	background-color: white;
+	color: rgb(29, 30, 34);
+	cursor: pointer;
+	border: 2px solid rgb(29, 30, 34);
+	margin-top: 20px;
+  border-radius: 20px;
+}
+
+.cta-btns button:hover {
+	background:  linear-gradient(
+      rgba(29, 30, 34, 0.9),
+      rgba(29, 30, 34, 0.6)
+    ), url(images/motherboard.jpg);
+	color: white;
+	border: 2px solid white
+}
+
+.tech-stack {
+	font-size: 18px;
+	width: 100%;
+	height: 330px;
+	background-color: white;
+	display: flex;
+	flex-direction: column;
+	color: black;
+}
+
+.tech-stack header {
+	font-size: 50px;
+	margin: 40px 10px
+}
+
+.tech-stack ul {
+	display: flex;
+	list-style: none;
+	justify-content: space-between;
+	align-items: center;
+	width: 50%;
+	height: 100px;
+}
+
+.tech-stack ul li {
+	margin: 0 5px
+}
+
+.tech-stack ul li i {
+	color: black;
+	margin: 0 30px;
+	transform: scale(5)
+}
+
+.projects-page {
+	width: 100%;
+	padding: 0;
+	padding-bottom: 50px;
+}
+
+.projects-page > header {
+	width: 100%;
+	margin-bottom: 20px
+}
+
+.project {
+	margin-bottom: 30px;
+	border-bottom: 2px solid white;
+}
+
+.project1 {
+	font-size: 20px;
+	width: 100%;	
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: flex-start;
+}
+
+.quiz-app-ss {
+	width: 50%
+}
+
+.thumbnail-wrapper {
+	width: 100%;
+	margin-top: 20px;
+}
+
+.project1 img {
+	width: 100%;
+	height: 100%;
+	margin: 0 auto;
+	min-width: 200px;
+}
+
+.technologies {
+	width: 100%;
+	color: black;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.tech-icons {
+	width: 100%;
+	display: flex;
+	list-style: none;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.tech-icons li {
+	margin: 5px;
+}
+
+.tech-icons li img {
+	width: 50px;
+	vertical-align: middle;
+	border: none;
+}
+
+.links {
+	width: 100%;
+	margin-top: 20px;
+	margin-bottom: 20px;
 	
-	`
 }
 
-function generateAboutMePage (){
-	return `	
-		<div class="about-me">
-			<div class="bio">
-				<header>
-					<h1>About</h1>
-				</header>
-				<h2>I am an Artificial Intelligence enthusiast pursuing my undergraduate degree in Electronics and Communication Engineering at IIT Guwahati.</h2>
-				<br>
-				<h3>I am proficient at Python Programming (adept at Tensorflow, Keras, scikit-learn; working proficiency in PyTorch), C++ Object Oriented Programming and MATLAB Programming.</h3>
-				<h4>I love the challenge of solving complex problems with a team and always striving to learn from my teammates. </h4>
-				<h5>When I’m not doing AI/ML or coding, you can find me playing games, listening and enjoying music, writing stories, solving different types of Rubik's Cube, or just catching up with friends over a cup of coffee!</h5>
-			</div>
-			<br>
-		</div>
-`
+.links button {
+	padding: 15px;
+	width: 100%;
+	font-size: 18px;
+	background-color: white;
+	color: #1F2833;
+	cursor: pointer;
+	border: 2px solid black;
+	margin: 5px 0;
+	font-weight: 500
 }
 
-function generateProjectsPage(){
-	return `
-		<div class="projects-page">	
-			<header>
-				<h1>Projects</h1>
-			</header>
-		<div class="project">
-			<div class="project1">
-				<div class="left-side">
-					<h2>Fake-News-Detection</h2>
-					<div class="description">
-						A project done in a team of four by IITG.ai for Techivence IIT Guwahati.Fake News is a spread of disinformation and hoaxes through any news platform.We divided our technique into 3 categories to detect Fake News using AI.First Political Fake News applied Bert model to get state of art accuracy in LIAR LIAR Dataset with 70 percent on test set and also identified Clickbaits and Fake Articles.
-					</div>
-				</div>
-				<div class="right-side">
-					<div class="thumbnail-wrapper">
-						<a href="https://github.com/IITGuwahati-AI/Fake-News-Detection" target="_blank">
-							<img src="images/rhcp-quiz-app-ss.png" alt="" class="quiz-app-ss">
-						</a>
-					</div>
-				</div>
-			</div>
-			<div class="technologies">
-				<ul class='tech-icons'>
-					<li><img src="images/html5.svg" alt=""></li>
-					<li><img src="images/css.svg" alt=""></li>
-					<li><img src="images/javascript.svg" alt=""></li>
-					<li><img src="images/jquery.svg" alt=""></li>
-				</ul>
-			</div>
-			<div class="links">
-				<a href="https://github.com/IITGuwahati-AI/Fake-News-Detection" target="_blank">
-					<button>GitHub Repo</button>
-				</a>
-			</div>
-		</div>
-		
-		<div class="project">
-			<div class="project1">
-				<div class="left-side">
-					<h2>Perfect Date App</h2>
-					<div class="description">
-						The Perfect Date App allows you to plan, and keep track of all the logistics and details that go into the perfect date by utilizing multiple APIs (Seat Geek API, Google GeoCode API, Zomato API) to help users search and find local entertainment and restaurants within walking distance.
-					</div>
-				</div>
-				<div class="right-side">
-					<div class="thumbnail-wrapper">
-						<a href="https://iamcharliekim.github.io/perfect-date-app/" target="_blank">
-							<img src="images/page2-event-search.png" alt="" class="quiz-app-ss">
-						</a>
-					</div>
-				</div>
-			</div>
-			<div class="technologies">
-				<ul class='tech-icons'>
-					<li><img src="images/html5.svg" alt=""></li>
-					<li><img src="images/css.svg" alt=""></li>
-					<li><img src="images/javascript.svg" alt=""></li>
-					<li><img src="images/jquery.svg" alt=""></li>
-				</ul>
-			</div>
-			<div class="links">
-				<a href="https://github.com/iamcharliekim/perfect-date-app" target="_blank">
-					<button>GitHub Repo</button>
-				</a>
-				<a href="https://iamcharliekim.github.io/perfect-date-app/" target="_blank">
-					<button>See It Online</button>
-				</a>
-			</div>
-		</div>
-		</div>
-`
+.links button:hover {
+	background:  linear-gradient(
+      rgba(29, 30, 34, 0.9),
+      rgba(29, 30, 34, 0.6)
+    ), url(images/motherboard.jpg);
+	color: white;
+	border: 2px solid white
 }
 
-function generateContactPage(){
-	return `
-		<div class="contact-pg">
-			<div class="contact-socials">
-				<header>
-					<h1> Contact </h1>
-				</header>
-		
-				<ul class="contact-socials-ul">
-					<li>
-						<a href="mailto:yashwanthm0330@gmail.com">
-							<i class="fas fa-envelope"></i>
-							<span class="contact-text">
-								yashwanthm0330@gmail.com
-							</span>
-						</a> 
-					</li>
-					<li>
-						<a href="https://github.com/Yash0330" target="_blank">
-							<i class="fab fa-github"></i>
-							<span class="contact-text">
-								github.com/Yash0330
-							</span>
-						</a>
-					</li>		
-					<li>
-						<a href="https://www.linkedin.com/in/yashwanth-m-982934169/" target="_blank">		<i class="fab fa-linkedin"></i>
-							<span class="contact-text">
-								linkedin.com/in/yashwanth-m-982934169
-							</span>
-						</a>
-					</li>
-				</ul>
-			</div>
-		</div>
-		`
+.project1 {
+	margin-bottom: 20px;
 }
 
-// RENDER FUNCTION
-function renderToPage(page){
-	$('main').html(page)
-}		
+.project1 a {
+	color: white;
+	text-decoration: none;
+}
+
+.description {
+	width: 100%;
+	font-size: 18px;
+	margin-top: 20px;
+}
 
 
-// NAVBAR ACTIVE-LINK FUNCTION
-function navBorderBottom (toUnderline){
-	$(toUnderline).css('border-bottom', '2px solid #848FA5')
-	$(toUnderline).css('color', '#848FA5')
+.cto-btns {
+	width: 100%;
+	cursor: pointer;
+	margin: 0
+}
 
-	let navLinks = $('.navbar-list li div')
+.gh-repo-btn {
+	padding: 10px;
+	width: 150px;
+	font-size: 20px;
+	cursor: pointer;	
+	text-align: left
+}
+
+.contact-pg {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	justify-content: flex-start;
+}
+
+.contact-socials {
+	padding-bottom: 20px;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	justify-content: center;
+}
+
+.contact-socials header {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: flex-start
+}
+
+.contact-socials-ul {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: flex-start
+}
+
+.contact-socials-ul li {
+	list-style: none;
+}
+
+.contact-socials-ul li a {
+	text-decoration: none;
+}
+
+.contact-socials-ul li a i {
+	color: white;
+	font-size: 30px;
+	margin: 10px 0;
+}
+
+.contact-text {
+	font-size: 18px;
+	margin-left: 10px;
+	color: white;
+}
+
+footer {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 100%;
+	color: white;
+	font-size: 18px;
+	height: 50px;
+	position: relative;
+	margin-top: -50px;
+	clear: both;
+	padding: 0 10px;
+	background-color: #0B0C10;
+	border-top: .1px solid #C5C6C7
+}
+
+.footer-links {
+	display: flex;
+	list-style: none;
+}
+
+.footer-links li a i {
+	color: white;
+	margin: 0 10px;
+}
+
+.footer-links li a i:hover {
+	color: #848FA5
+}
+
+@media (min-width: 768px){
 	
-	for (let i = 0 ; i < navLinks.length; i++){		
-		if (`.${navLinks[i].className}` !== toUnderline){
-			$(`.${navLinks[i].className}`).css('border-bottom', 'none')
-			
-			$(`.${navLinks[i].className}`).css('color', 'white')
-		}
+	navbar {
+		display: flex;
+		justify-content: center;
 	}
 	
-	$('.home-icon').css('color', 'white')
+	.inner-nav {
+		padding-left: 0;
+		padding-right: 0
+	}
+	
+	.inner-nav header {
+		width: 33%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+	
+	.hamburger {
+		display: none;
+	}
+	
+	.navbar-menu {
+		width: 75%;
+		display:flex;
+		justify-content: center;
+		font-size: 20px;
+	}
+	
+	.navbar-menu a {
+		text-decoration: none;
+		color: white;
+	}
+	
+	.navbar-list {
+		width: 50%;
+		display: flex;
+		justify-content: center;
+	}
+	
+	.navbar-list li {
+		list-style: none;
+		margin: 0 15px;
+	}
+	
+	.navbar-list li div {
+		color: white;
+		cursor: pointer;
+		font-weight: 700;
+	}		
+	
+	
 
+	.navbar-list li div:hover {
+		transform: scale(1.1);
+	}	
+	
+		
+	.navbar-socials {
+		width: 50%;
+		display: flex;
+		justify-content: center;
+ 	}
+	
+	.navbar-socials li {
+		list-style: none;
+		margin: 0 15px;
+
+	}
+	
+	main { 
+		padding-bottom: 50px;
+	}
+	
+	main h1 {
+		font-size: 55px
+	}
+	
+	.home {
+		display: flex;
+		justify-content: flex-start;
+		align-items: flex-start;
+		width: 100%;
+	}
+
+	.hero {
+		display: flex;
+		flex-direction: row;
+		justify-content: flex-start;
+		align-items: flex-start;
+		width: 100%
+	}
+	
+	.hero-header {
+		display: flex;
+		flex-direction: row;
+		justify-content: flex-start;
+		align-items: flex-start;
+	}
+
+	.hero-header header{
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-start;
+		align-items: center;
+
+	}
+
+	.hero-header header h1 {
+		margin-left: 20px
+	}
+
+	.profile-pic-wrapper {
+		width: 250px;
+		margin-bottom: 20px;
+	}
+
+	.profile {
+		border-radius: 50%;
+		width: 100%;
+	}
+
+	.hero-text {
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-start;
+		align-items: flex-start;
+		text-align: left;
+	}
+	
+	.cta-btns {
+		margin-top: 20px;
+	}
+	
+	.projects-page {
+		padding-bottom: 0
+	}
+	
+	.projects-page > header {
+		width: 100%
+	}
+	
+	main > div:first-child{
+		margin-bottom: 20px;
+	}
+	
+	.project1 {
+		flex-direction: row;
+		justify-content: space-between;
+		align-items: flex-start
+	}
+	
+	.project1 img:hover {
+		border: 2px solid white;
+	}
+	
+	.left-side {
+		width: 45%;
+	}
+	
+	.right-side {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		width: 50%;
+	}
+	
+	.thumbnail-wrapper {
+		margin: 0;
+		width: 100%
+	}
+	
+	.right-side img {
+		width: 100%
+	}
+	
+	.contact-socials-ul li a i {
+		color: white;
+		font-size: 50px;
+		margin: 10px 0;
+	}
+
+	.contact-text {
+		font-size: 18px;
+		margin-left: 10px;
+		color: white;
+	}
+	.contact-text {
+		font-size: 25px
+	}
 }
-
-// PAGE-GENERATOR FUNCTIONS
-
-function homeGenerator(e){
-	e.preventDefault()
-	$('.menu').css('display', 'none');
-	$('main').show()
-	$('footer').show()
-	renderToPage(generateHomePage())
-}
-
-function aboutGenerator(e){
-	e.preventDefault()
-	$('.menu').css('display', 'none');
-	$('main').show()
-	$('footer').show()
-	renderToPage(generateAboutMePage())
-}
-
-function projectsGenerator(e){
-	e.preventDefault()
-	$('.menu').css('display', 'none');
-	$('main').show()
-	$('footer').show()
-
-	renderToPage(generateProjectsPage())
-}
-
-function contactGenerator(e){
-	e.preventDefault()
-	$('.menu').css('display', 'none');
-	$('main').show()
-	$('footer').show()
-
-	renderToPage(generateContactPage())
-}
-
-// DROP-DOWN MENU 
-function showHideDropDownMenu(){
-	$('.dropdown-menu').on('click', (e)=>{
-		showMenu = !showMenu
-
-		if (showMenu){
-			$('main').hide()
-			$('footer').hide()
-			$('.menu').css('display', 'flex')
-
-		} else {
-			$('.menu').css('display', 'none')
-			$('main').show()
-			$('footer').show()
-		}
-	})
-}
-
-// DROPDOWN MENU LINKS
-function hamburgerClickHandlers(){
-	$('.menu-home').on('click', (e)=>{
-	 homeGenerator(e)
-	})
-
-	$('.about').on('click', (e)=>{
-		 aboutGenerator(e)
-	})
-
-
-	$('.projects').on('click', (e)=>{
-		projectsGenerator(e)
-	})
-
-
-	$('.contact').on('click', (e)=>{
-		contactGenerator(e)
-	})
-}
-
-// NAVBAR LINKS
-function navBarLinkHandlers(){
-	$('.home-icon').on('click', (e)=>{
-		homeGenerator(e);
-
-		let navLinks = $('.navbar-list li div')
-
-		for (let i = 0 ; i < navLinks.length; i++){		
-				$(`.${navLinks[i].className}`).css('border-bottom', 'none')
-
-				$(`.${navLinks[i].className}`).css('color', 'white')
-		}
-
-		$('.home-icon').css('color', '#848FA5')
-
-	})
-
-	$('.nav-home').on('click', (e)=>{
-		homeGenerator(e);
-		navBorderBottom(`.${e.target.className}`)
-	})
-
-	$('.nav-about').on('click', (e)=>{
-		aboutGenerator(e)
-		navBorderBottom(`.${e.target.className}`)
-	})
-
-	$('.nav-projects').on('click', (e)=>{
-		projectsGenerator(e)
-		navBorderBottom(`.${e.target.className}`)
-	})
-
-	$('.nav-contact').on('click', (e)=>{
-		contactGenerator(e);
-		navBorderBottom(`.${e.target.className}`)
-	})
-}
-
-// CTA BUTTONS
-function CTAhandlers(){
-	$('main').on('click', '.cta-projects', (e)=>{
-		projectsGenerator(e);
-		navBorderBottom('.nav-projects')
-	})
-
-	$('main').on('click', '.cta-contact', (e)=>{
-		contactGenerator(e);
-		navBorderBottom('.nav-contact')
-	})
-}
-
-// LOAD PAGE FUNCTION
-function loadPage(){
-	renderToPage(generateHomePage())
-	showHideDropDownMenu()
-	hamburgerClickHandlers()
-	navBarLinkHandlers()
-	CTAhandlers()
-}
-
-// DOCUMENT-READY FUNCTION 
-$(loadPage())
