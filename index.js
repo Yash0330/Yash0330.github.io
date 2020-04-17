@@ -167,7 +167,7 @@ function generateContactPage(){
 						<a href="https://www.instagram.com/yash__0330/">
 							<i class="fab fa-instagram"></i>
 							<span class="contact-text">
-								https://www.instagram.com/yash__0330
+								instagram.com/yash__0330
 							</span>
 						</a> 
 					</li>	
