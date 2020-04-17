@@ -13,7 +13,7 @@ function generateHomePage(){
 						
 					</header>
 					<div class="hero-text">
-						<h1>Yashwanth M</h1>
+						<h1>Yashwanth</h1>
 
 						<h2>AI Enthusiast</h2>
 						<br>
