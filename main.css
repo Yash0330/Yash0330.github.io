@@ -272,6 +272,7 @@ main h5 {
 	cursor: pointer;
 	border: 2px solid rgb(29, 30, 34);
 	margin-top: 20px;
+  border-radius: 20px;
 }
 
 .cta-btns button:hover {
