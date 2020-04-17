@@ -13,12 +13,12 @@ function generateHomePage(){
 						
 					</header>
 					<div class="hero-text">
-						<h1>Charlie Kim</h1>
+						<h1>Yashwanth M</h1>
 
-						<h2>Web Developer</h2>
+						<h2>AI Enthusiast</h2>
 						<br>
 
-						<h3>I am currently based in the Washington D.C. area.</h3>
+						<h3>I am currently studying Electronics and communication Engineering Sophomore year IIT Guwahati.</h3>
 						<h4>I am a lover of dogs, music and all things code!</h4>
 
 						<div class="cta-btns">
@@ -42,14 +42,14 @@ function generateAboutMePage (){
 					<h1>About</h1>
 				</header>
 
-				<h2>I am an aspiring Full Stack Web Developer currently based in the Washington D.C. area.</h2>
+				<h2>I am an Artificial Intelligence enthusiast pursuing my undergraduate degree in Electronics and Communication Engineering at IIT Guwahati.</h2>
 				<br>
 
-				<h3>I specialize in designing and building interactive user interfaces that are conducive to a stimulating and engaging user experience.</h3>
+				<h3>I am proficient at Python Programming (adept at Tensorflow, Keras, scikit-learn; working proficiency in PyTorch), C++ Object Oriented Programming and MATLAB Programming.</h3>
 
 				<h4>I love the challenge of solving complex problems with a team and always striving to learn from my teammates. </h4>
 
-				<h5>When I’m not coding, you can find me playing guitar, composing and producing music, hiking, in a downward dog, or just catching up with friends over a cup of coffee!</h5>
+				<h5>When I’m not doing AI/ML or coding, you can find me playing games, listening and enjoying music, writing stories, solving different types of Rubik's Cube, or just catching up with friends over a cup of coffee!</h5>
 			</div>
 			<br>
 		</div>
@@ -65,16 +65,16 @@ function generateProjectsPage(){
 		<div class="project">
 			<div class="project1">
 				<div class="left-side">
-					<h2>The Red Hot Chili Peppers Quiz App</h2>
+					<h2>Fake-News-Detection</h2>
 
 					<div class="description">
-						This quiz app is a tribute to one of my favorite bands of all time, The Red Hot Chili Peppers!  Users are asked 5 multiple-choice RHCP-trivia questions and given feedback at the end to determine whether you are a fan, super-fan, or just a poser!  
+						A project done in a team of four by IITG.ai for Techivence IIT Guwahati.Fake News is a spread of disinformation and hoaxes through any news platform.We divided our technique into 3 categories to detect Fake News using AI.First Political Fake News applied Bert model to get state of art accuracy in LIAR LIAR Dataset with 70 percent on test set and also identified Clickbaits and Fake Articles.
 					</div>
 				</div>
 
 				<div class="right-side">
 					<div class="thumbnail-wrapper">
-						<a href="https://iamcharliekim.github.io/rhcp-quizz-app/" target="_blank">
+						<a href="https://github.com/IITGuwahati-AI/Fake-News-Detection" target="_blank">
 							<img src="images/rhcp-quiz-app-ss.png" alt="" class="quiz-app-ss">
 						</a>
 					</div>
