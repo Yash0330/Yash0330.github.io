@@ -8,7 +8,7 @@ function generateHomePage(){
 				<div class="hero-header">
 					<header>
 						<div class="profile-pic-wrapper">
-							<img src="images/profile.jpg" alt="" class="profile">
+							<img src="images/profile.png" alt="" class="profile">
 						</div>
 						
 					</header>
@@ -92,11 +92,8 @@ function generateProjectsPage(){
 			</div>
 
 			<div class="links">
-				<a href="https://github.com/iamcharliekim/rhcp-quizz-app" target="_blank">
+				<a href="https://github.com/IITGuwahati-AI/Fake-News-Detection" target="_blank">
 					<button>GitHub Repo</button>
-				</a>
-				<a href="https://iamcharliekim.github.io/rhcp-quizz-app/" target="_blank">
-					<button>See It Online</button>
 				</a>
 			</div>
 		</div>
@@ -154,25 +151,25 @@ function generateContactPage(){
 		
 				<ul class="contact-socials-ul">
 					<li>
-						<a href="mailto:cwkim3@gmail.com">
+						<a href="mailto:yashwanthm0330@gmail.com">
 							<i class="fas fa-envelope"></i>
 							<span class="contact-text">
-								cwkim3@gmail.com
+								yashwanthm0330@gmail.com
 							</span>
 						</a> 
 					</li>
 					<li>
-						<a href="https://github.com/iamcharliekim" target="_blank">
+						<a href="https://github.com/Yash0330" target="_blank">
 							<i class="fab fa-github"></i>
 							<span class="contact-text">
-								github.com/iamcharliekim
+								github.com/Yash0330
 							</span>
 						</a>
 					</li>		
 					<li>
-						<a href="https://www.linkedin.com/in/charleswkim/" target="_blank">		<i class="fab fa-linkedin"></i>
+						<a href="https://www.linkedin.com/in/yashwanth-m-982934169/" target="_blank">		<i class="fab fa-linkedin"></i>
 							<span class="contact-text">
-								linkedin.com/in/charleswkim
+								linkedin.com/in/yashwanth-m-982934169
 							</span>
 						</a>
 					</li>
