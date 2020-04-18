@@ -715,6 +715,7 @@ footer {
 		font-size: 18px;
 		margin-left: 10px;
 		color: white;
+		font-style: italic; 
 	}
 	.contact-text {
 		font-size: 25px
