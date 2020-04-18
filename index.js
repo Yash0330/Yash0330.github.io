@@ -81,7 +81,7 @@ function generateProjectsPage(){
 			</div>
 			<div class="links">
 				<a href="https://github.com/IITGuwahati-AI/Fake-News-Detection" target="_blank">
-					<button>GitHub Repo</button>
+					<button class="link">GitHub Repo</button>
 				</a>
 			</div>
 		</div>
@@ -112,10 +112,10 @@ function generateProjectsPage(){
 			</div>
 			<div class="links">
 				<a href="https://github.com/iamcharliekim/perfect-date-app" target="_blank">
-					<button>GitHub Repo</button>
+					<button class="link">GitHub Repo</button>
 				</a>
 				<a href="https://iamcharliekim.github.io/perfect-date-app/" target="_blank">
-					<button>See It Online</button>
+					<button class="link">See It Online</button>
 				</a>
 			</div>
 		</div>
