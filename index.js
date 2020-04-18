@@ -89,37 +89,92 @@ function generateProjectsPage(){
 		<div class="project">
 			<div class="project1">
 				<div class="left-side">
-					<h2>Perfect Date App</h2>
+					<h2>Face Generation and Styling by StyleGan</h2>
 					<div class="description">
-						The Perfect Date App allows you to plan, and keep track of all the logistics and details that go into the perfect date by utilizing multiple APIs (Seat Geek API, Google GeoCode API, Zomato API) to help users search and find local entertainment and restaurants within walking distance.
+						The alternative generator architecture for generative adversarial networks, borrowing from style transfer literature. This leads to an automatically learned, unsupervised separation of high-level attributes (e.g., pose and identity when trained on human faces) and stochastic variation in the generated images (e.g., freckles, hair), and it enables intuitive, scale-specific control of the synthesis.Pretrained model trained from NVIDIA was used to train on our faces and was used to style user specific own faces. 
 					</div>
 				</div>
 				<div class="right-side">
 					<div class="thumbnail-wrapper">
-						<a href="https://iamcharliekim.github.io/perfect-date-app/" target="_blank">
-							<img src="images/page2-event-search.png" alt="" class="quiz-app-ss">
+						<a href="https://github.com/IITGuwahati-AI/StyleGAN" target="_blank">
+							<img src="images/stylegan.jpg" alt="" class="quiz-app-ss">
 						</a>
 					</div>
 				</div>
 			</div>
 			<div class="technologies">
 				<ul class='tech-icons'>
-					<li><img src="images/html5.svg" alt=""></li>
-					<li><img src="images/css.svg" alt=""></li>
-					<li><img src="images/javascript.svg" alt=""></li>
-					<li><img src="images/jquery.svg" alt=""></li>
+					<li><img src="images/python.svg" alt=""></li>
+					<li><img src="images/tensorflow.svg" alt=""></li>
+					<li><img src="images/nvidia.svg" alt=""></li>
+					<li><img src="images/anaconda.svg" alt=""></li>
 				</ul>
 			</div>
 			<div class="links">
-				<a href="https://github.com/iamcharliekim/perfect-date-app" target="_blank">
+				<a href="https://github.com/IITGuwahati-AI/StyleGAN" target="_blank">
 					<button class="link">GitHub Repo</button>
-				</a>
-				<a href="https://iamcharliekim.github.io/perfect-date-app/" target="_blank">
-					<button class="link">See It Online</button>
 				</a>
 			</div>
 		</div>
 		</div>
+
+		<div class="project">
+			<div class="project1">
+				<div class="left-side">
+					<h2>Car-detection-for-Autonomous-Driving</h2>
+					<div class="description">
+						A cousera project in which the data was from a camera mounted in car and used a pre-trained YOLO model to train and get bounding boxes and filtered through all the boxes using non-max suppression.
+					</div>
+				</div>
+				<div class="right-side">
+					<div class="thumbnail-wrapper">
+						<a href="https://github.com/Yash0330/Car-detection-for-Autonomous-Driving" target="_blank">
+							<img src="images/car_detection.jpg" alt="" class="quiz-app-ss">
+						</a>
+					</div>
+				</div>
+			</div>
+			<div class="technologies">
+				<ul class='tech-icons'>
+					<li><img src="images/python.svg" alt=""></li>
+					<li><img src="images/tensorflow.svg" alt=""></li>
+					<li><img src="images/keras.svg" alt=""></li>
+					<li><img src="images/opencv.svg" alt=""></li>
+				</ul>
+			</div>
+			<div class="links">
+				<a href="https://github.com/Yash0330/Car-detection-for-Autonomous-Driving" target="_blank">
+					<button class="link">GitHub Repo</button>
+				</a>
+			</div>
+		</div>
+    <div class="projects-page">	
+			<header>
+				<h1>Articles</h1>
+			</header>
+    <div class="project">
+			<div class="project1">
+				<div class="left-side">
+					<h2>Also checkout my medium article on <br> Callbacks in Keras</h2>
+					<div class="description">
+						A callback is a set of functions to be applied at given stages of the training procedure. You can use callbacks to get a view on internal states and statistics of the model during training.
+					</div>
+				</div>
+				<div class="right-side">
+					<div class="thumbnail-wrapper">
+						<a href="https://medium.com/iitg-ai/how-to-use-callbacks-in-keras-to-visualize-monitor-and-improve-your-deep-learning-model-c9ca37901b28" target="_blank">
+							<img src="images/callback.png" alt="" class="quiz-app-ss">
+						</a>
+					</div>
+				</div>
+			</div>
+			<div class="links">
+				<a href="https://medium.com/iitg-ai/how-to-use-callbacks-in-keras-to-visualize-monitor-and-improve-your-deep-learning-model-c9ca37901b28" target="_blank">
+					<button class="link">Medium Article</button>
+				</a>
+			</div>
+		</div>
+    </div>
 `
 }
 
@@ -151,7 +206,7 @@ function generateContactPage(){
 						<a href="https://www.facebook.com/profile.php?id=100011686931983">
 							<i class="fab fa-facebook-square"></i>
 							<span class="contact-text">
-								facebook.com/yashwanth.0330
+								facebook.com/yashwanth.m.93
 							</span>
 						</a> 
 					</li>
@@ -174,7 +229,6 @@ function generateContactPage(){
 					
 				</ul>
 			</div>
-		</div>
 		`
 }
 
