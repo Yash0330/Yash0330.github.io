@@ -73,10 +73,10 @@ function generateProjectsPage(){
 			</div>
 			<div class="technologies">
 				<ul class='tech-icons'>
-					<li><img src="images/html5.svg" alt=""></li>
-					<li><img src="images/css.svg" alt=""></li>
+					<li><img src="images/python.svg" alt=""></li>
+					<li><img src="images/tensorflow.svg" alt=""></li>
 					<li><img src="images/javascript.svg" alt=""></li>
-					<li><img src="images/jquery.svg" alt=""></li>
+					<li><img src="images/pytorch.svg" alt=""></li>
 				</ul>
 			</div>
 			<div class="links">
