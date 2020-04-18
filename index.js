@@ -136,14 +136,14 @@ function generateContactPage(){
 						<a href="mailto:yashwanthm0330@gmail.com">
 							<i class="fas fa-envelope"></i>
 							<span class="contact-text">
-								yashwanthm0330@gmail.com
+								<i>yashwanthm0330@gmail.com</i>
 							</span>
 						</a> 
 					</li>
           <li>
 						<a href="https://www.linkedin.com/in/yashwanth-m-982934169/" target="_blank">		<i class="fab fa-linkedin"></i>
 							<span class="contact-text">
-								linkedin.com/in/yashwanth-m-982934169
+								<i>linkedin.com/in/yashwanth-m-982934169</i>
 							</span>
 						</a>
 					</li>
@@ -151,7 +151,7 @@ function generateContactPage(){
 						<a href="https://www.facebook.com/profile.php?id=100011686931983">
 							<i class="fab fa-facebook-square"></i>
 							<span class="contact-text">
-								facebook.com/yashwanth.0330
+								<i>facebook.com/yashwanth.0330</i>
 							</span>
 						</a> 
 					</li>
@@ -159,7 +159,7 @@ function generateContactPage(){
 						<a href="https://github.com/Yash0330" target="_blank">
 							<i class="fab fa-github"></i>
 							<span class="contact-text">
-								github.com/Yash0330
+								<i>github.com/Yash0330</i>
 							</span>
 						</a>
 					</li>	
@@ -167,7 +167,7 @@ function generateContactPage(){
 						<a href="https://www.instagram.com/yash__0330/">
 							<i class="fab fa-instagram"></i>
 							<span class="contact-text">
-								instagram.com/yash__0330
+								<i>instagram.com/yash__0330</i>
 							</span>
 						</a> 
 					</li>	
