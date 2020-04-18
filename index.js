@@ -66,7 +66,7 @@ function generateProjectsPage(){
 				<div class="right-side">
 					<div class="thumbnail-wrapper">
 						<a href="https://github.com/IITGuwahati-AI/Fake-News-Detection" target="_blank">
-							<img src="images/rhcp-quiz-app-ss.png" alt="" class="quiz-app-ss">
+							<img src="images/Fake_NewsAI-1.jpg" alt="" class="quiz-app-ss">
 						</a>
 					</div>
 				</div>
