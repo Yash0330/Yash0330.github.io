@@ -19,7 +19,6 @@ function generateHomePage(){
 						<i><h3>I am currently studying Electronics and communication Engineering Sophomore year IIT Guwahati.</h3>
 						<h4>I am a lover of dogs, music and all things code!</h4></i>
 						<div class="cta-btns">
-							<button class="cta-projects">Projects</button>
 							<button class="cta-contact">Contact Me</button>
 						</div>
 					</div>
@@ -148,6 +147,13 @@ function generateProjectsPage(){
 				</a>
 			</div>
 		</div>
+    </div>
+`
+}
+
+function generateArticlesPage(){
+	return `
+		<div class="projects-page">	
     <div class="projects-page">	
 			<header>
 				<h1>Articles</h1>
@@ -155,7 +161,7 @@ function generateProjectsPage(){
     <div class="project">
 			<div class="project1">
 				<div class="left-side">
-					<h2>Also checkout my medium article on <br> Callbacks in Keras</h2>
+					<h2>How to use Callbacks in Keras to Visualize, Monitor and Improve your Deep Learning Model</h2>
 					<div class="description">
 						A callback is a set of functions to be applied at given stages of the training procedure. You can use callbacks to get a view on internal states and statistics of the model during training.
 					</div>
@@ -180,55 +186,46 @@ function generateProjectsPage(){
 
 function generateContactPage(){
 	return `
-		<div class="contact-pg">
-			<div class="contact-socials">
+	<div class="about-me">
+			<div class="bio">
 				<header>
-					<h1> Contact </h1>
+					<h1>Send me a message</h1>
 				</header>
-		
-				<ul class="contact-socials-ul">
-					<li>
-						<a href="mailto:yashwanthm0330@gmail.com">
-							<i class="fas fa-envelope"></i>
-							<span class="contact-text">
-								yashwanthm0330@gmail.com
-							</span>
-						</a> 
-					</li>
-          <li>
-						<a href="https://www.linkedin.com/in/yashwanth-m-982934169/" target="_blank">		<i class="fab fa-linkedin"></i>
-							<span class="contact-text">
-								linkedin.com/in/yashwanth-m-982934169
-							</span>
-						</a>
-					</li>
-          <li>
-						<a href="https://www.facebook.com/profile.php?id=100011686931983">
-							<i class="fab fa-facebook-square"></i>
-							<span class="contact-text">
-								facebook.com/yashwanth.m.93
-							</span>
-						</a> 
-					</li>
-					<li>
-						<a href="https://github.com/Yash0330" target="_blank">
-							<i class="fab fa-github"></i>
-							<span class="contact-text">
-								github.com/Yash0330
-							</span>
-						</a>
-					</li>	
-          <li>
-						<a href="https://www.instagram.com/yash__0330/">
-							<i class="fab fa-instagram"></i>
-							<span class="contact-text">
-								instagram.com/yash__0330
-							</span>
-						</a> 
-					</li>	
-					
-				</ul>
+				<form action="https://formspree.io/f/xayadrze" method="POST">
+					<div class="fields">
+						<div class="field half">
+							<label for="name">Name</label>
+							<input type="text" name="name" id="name" />
+						</div>
+						<div class="field half">
+							<label for="email">Email</label>
+							<input type="text" name="email" id="email" />
+						</div>
+						<div class="field">
+							<label for="message">Message</label>
+							<textarea name="message" id="message" rows="4"></textarea>
+						</div>
+					</div>
+					<div class="cta-btns">
+						<button type="submit" value="Send Message">Send Message</button>
+						<button type="reset" value="Reset">Reset</button>
+					</div>
+				</form>
 			</div>
+			<br>
+			<header>
+				<h1>OR</h1>
+			</header>
+			<div class="socials">
+			<ul class="socials-ul">
+				<li><a href="mailto:yashwanthm0330@gmail.com"><i class="fas fa-envelope"></i></a></li>
+				<li><a href="https://www.linkedin.com/in/yashwanth-m-982934169/" target="_blank"><i class="fab fa-linkedin"></i></a></li>
+				<li><a href="https://www.facebook.com/profile.php?id=100011686931983"><i class="fab fa-facebook-square"></i></a></li>
+				<li><a href="https://github.com/Yash0330" target="_blank"><i class="fab fa-github"></i></a></li>
+				<li><a href="https://www.instagram.com/yash__0330/" target="_blank"><i class="fab fa-instagram"></i></a></li>
+			</ul>
+			</div>
+		</div>
 		`
 }
 
@@ -284,6 +281,15 @@ function projectsGenerator(e){
 	renderToPage(generateProjectsPage())
 }
 
+function articlesGenerator(e){
+	e.preventDefault()
+	$('.menu').css('display', 'none');
+	$('main').show()
+	$('footer').show()
+
+	renderToPage(generateArticlesPage())
+}
+
 function contactGenerator(e){
 	e.preventDefault()
 	$('.menu').css('display', 'none');
@@ -326,6 +332,10 @@ function hamburgerClickHandlers(){
 		projectsGenerator(e)
 	})
 
+	$('.articles').on('click', (e)=>{
+		articlesGenerator(e)
+	})
+
 
 	$('.contact').on('click', (e)=>{
 		contactGenerator(e)
@@ -364,6 +374,11 @@ function navBarLinkHandlers(){
 		navBorderBottom(`.${e.target.className}`)
 	})
 
+	$('.nav-articles').on('click', (e)=>{
+		articlesGenerator(e)
+		navBorderBottom(`.${e.target.className}`)
+	})
+
 	$('.nav-contact').on('click', (e)=>{
 		contactGenerator(e);
 		navBorderBottom(`.${e.target.className}`)
@@ -375,6 +390,11 @@ function CTAhandlers(){
 	$('main').on('click', '.cta-projects', (e)=>{
 		projectsGenerator(e);
 		navBorderBottom('.nav-projects')
+	})
+
+	$('main').on('click', '.cta-articles', (e)=>{
+		articlesGenerator(e);
+		navBorderBottom('.nav-articles')
 	})
 
 	$('main').on('click', '.cta-contact', (e)=>{
